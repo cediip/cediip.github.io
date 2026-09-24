@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name: projects, skills and experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">YN</a>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== INTRO ========== -->
+    <section class="hero container">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Your Name</h1>
+      <p class="lead">
+        A short one or two sentence introduction. What you study or do, and what
+        kind of problems you like to work on.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See my projects</a>
+        <a href="#contact" class="btn">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ==========
+         To add a project: copy one <article class="card"> ... </article> block
+         and paste it inside the "grid" div. Remove the links you don't need. -->
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="grid">
+
+        <article class="card">
+          <h3>Project One</h3>
+          <p>A quick description of the project: what it does, why you built it, and what you learned.</p>
+          <ul class="tags">
+            <li>Python</li>
+            <li>Data analysis</li>
+          </ul>
+          <div class="links">
+            <a href="https://github.com/cediip" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>A quick description of the project: what it does, why you built it, and what you learned.</p>
+          <ul class="tags">
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+          </ul>
+          <div class="links">
+            <a href="https://github.com/cediip" target="_blank" rel="noopener">Code →</a>
+            <a href="#" target="_blank" rel="noopener">Live demo →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>A quick description of the project: what it does, why you built it, and what you learned.</p>
+          <ul class="tags">
+            <li>C++</li>
+            <li>Embedded</li>
+          </ul>
+          <div class="links">
+            <a href="https://github.com/cediip" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ==========
+         Add or remove <li> items in each group. -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Languages</h3>
+          <ul class="tags">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>C++</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools &amp; Frameworks</h3>
+          <ul class="tags">
+            <li>Git</li>
+            <li>React</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Other</h3>
+          <ul class="tags">
+            <li>English (fluent)</li>
+            <li>French (native)</li>
+            <li>Teamwork</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ==========
+         To add an entry: copy one <li class="timeline-item"> ... </li> block.
+         Most recent first. -->
+    <section id="experience" class="section container">
+      <h2>Experience</h2>
+      <ol class="timeline">
+
+        <li class="timeline-item">
+          <div class="when">2025 — Present</div>
+          <div>
+            <h3>Job Title · Company</h3>
+            <p>One or two lines on what you did and what you achieved.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="when">2024</div>
+          <div>
+            <h3>Internship · Company</h3>
+            <p>One or two lines on what you did and what you achieved.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="when">2021 — 2025</div>
+          <div>
+            <h3>Degree · University</h3>
+            <p>Field of study, relevant courses or thesis topic.</p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- ========== CONTACT ========== -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="lead">Interested in working together or just want to say hi? Reach out.</p>
+      <ul class="contact-list">
+        <li><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><a href="https://github.com/cediip" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <p class="copyright">© <span id="year"></span> Your Name</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
