@@ -49,7 +49,7 @@ p { margin: 0 0 1rem; }
   padding: 0 16px;
 }
 
-.section { padding: 4rem 16px; scroll-margin-top: 64px; }
+.section { padding: 4rem 16px; scroll-margin-top: 76px; }
 
 .lead { font-size: 1.125rem; color: var(--muted); max-width: 60ch; }
 
@@ -67,10 +67,17 @@ p { margin: 0 0 1rem; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  gap: 1rem;
+  padding: 0.85rem 0;
 }
 
-.logo { font-weight: 700; color: var(--text); }
+/* Same size and weight as the section headings (h2) further down the page */
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
 
 .nav nav { display: flex; gap: 1.25rem; }
 .nav nav a { color: var(--muted); font-size: 0.95rem; }
@@ -219,7 +226,7 @@ p { margin: 0 0 1rem; }
   padding: 4rem 0 2rem;
   background: var(--surface);
   border-top: 1px solid var(--border);
-  scroll-margin-top: 64px;
+  scroll-margin-top: 76px;
 }
 /* One row per address: label on the left, mail link on the right */
 .contact-list {
@@ -258,7 +265,11 @@ p { margin: 0 0 1rem; }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 600px) {
+  /* The big logo and the menu no longer fit side by side, so stack them */
+  .nav-inner { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+  .logo { font-size: 1.4rem; }
   .nav nav { gap: 0.9rem; }
   .nav nav a { font-size: 0.85rem; }
+  .section, .footer { scroll-margin-top: 96px; }
   .hero { padding-top: 3.5rem; }
 }
