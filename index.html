@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name — Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name: projects, skills and experience.">
+  <meta name="description" content="Portfolio of Your Name: games, projects and skills.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
       <nav>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -33,7 +33,7 @@
       <h1>Your Name</h1>
       <p class="lead">
         A short one or two sentence introduction. What you study or do, and what
-        kind of problems you like to work on.
+        kind of projects you like to build.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">See my projects</a>
@@ -42,46 +42,76 @@
     </section>
 
     <!-- ========== PROJECTS ==========
-         To add a project: copy one <article class="card"> ... </article> block
-         and paste it inside the "grid" div. Remove the links you don't need. -->
+         Each project is one <article class="card"> block.
+         - poster:      put the image file in the images/ folder and point src at it
+         - description: write your text in the <p class="desc"> element
+         - link:        the "Go to page" button at the bottom of the card
+         To add a project, copy a whole <article> block and paste it in the grid. -->
     <section id="projects" class="section container">
       <h2>Projects</h2>
       <div class="grid">
 
         <article class="card">
-          <h3>Project One</h3>
-          <p>A quick description of the project: what it does, why you built it, and what you learned.</p>
-          <ul class="tags">
-            <li>Python</li>
-            <li>Data analysis</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/cediip" target="_blank" rel="noopener">Code →</a>
+          <a class="poster" href="https://foolishraccoon.itch.io/bonk" target="_blank" rel="noopener">
+            <img src="images/bonk.png" alt="Poster for Bonk" loading="lazy">
+          </a>
+          <div class="card-body">
+            <h3>Bonk</h3>
+            <p class="desc">
+              <!-- Your description here. -->
+            </p>
+            <ul class="tags">
+              <li>Game</li>
+            </ul>
+            <a class="btn btn-primary card-link" href="https://foolishraccoon.itch.io/bonk" target="_blank" rel="noopener">Go to page</a>
           </div>
         </article>
 
         <article class="card">
-          <h3>Project Two</h3>
-          <p>A quick description of the project: what it does, why you built it, and what you learned.</p>
-          <ul class="tags">
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/cediip" target="_blank" rel="noopener">Code →</a>
-            <a href="#" target="_blank" rel="noopener">Live demo →</a>
+          <a class="poster" href="https://foolishraccoon.itch.io/cctb-spatial-agents" target="_blank" rel="noopener">
+            <img src="images/cctb-spatial-agents.png" alt="Poster for CCTB Spatial Agents" loading="lazy">
+          </a>
+          <div class="card-body">
+            <h3>CCTB Spatial Agents</h3>
+            <p class="desc">
+              <!-- Your description here. -->
+            </p>
+            <ul class="tags">
+              <li>Simulation</li>
+            </ul>
+            <a class="btn btn-primary card-link" href="https://foolishraccoon.itch.io/cctb-spatial-agents" target="_blank" rel="noopener">Go to page</a>
           </div>
         </article>
 
         <article class="card">
-          <h3>Project Three</h3>
-          <p>A quick description of the project: what it does, why you built it, and what you learned.</p>
-          <ul class="tags">
-            <li>C++</li>
-            <li>Embedded</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/cediip" target="_blank" rel="noopener">Code →</a>
+          <a class="poster" href="https://mrb0h.itch.io/child-delivery-service" target="_blank" rel="noopener">
+            <img src="images/child-delivery-service.png" alt="Poster for Child Delivery Service" loading="lazy">
+          </a>
+          <div class="card-body">
+            <h3>Child Delivery Service</h3>
+            <p class="desc">
+              <!-- Your description here. -->
+            </p>
+            <ul class="tags">
+              <li>Game</li>
+            </ul>
+            <a class="btn btn-primary card-link" href="https://mrb0h.itch.io/child-delivery-service" target="_blank" rel="noopener">Go to page</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="poster" href="https://cedip.itch.io/recoil-arena" target="_blank" rel="noopener">
+            <img src="images/recoil-arena.png" alt="Poster for Recoil Arena" loading="lazy">
+          </a>
+          <div class="card-body">
+            <h3>Recoil Arena</h3>
+            <p class="desc">
+              <!-- Your description here. -->
+            </p>
+            <ul class="tags">
+              <li>Game</li>
+            </ul>
+            <a class="btn btn-primary card-link" href="https://cedip.itch.io/recoil-arena" target="_blank" rel="noopener">Go to page</a>
           </div>
         </article>
 
@@ -96,63 +126,43 @@
         <div>
           <h3>Languages</h3>
           <ul class="tags">
+            <li>C#</li>
             <li>Python</li>
             <li>JavaScript</li>
-            <li>C++</li>
-            <li>SQL</li>
           </ul>
         </div>
         <div>
-          <h3>Tools &amp; Frameworks</h3>
+          <h3>Tools &amp; Engines</h3>
           <ul class="tags">
+            <li>Unity</li>
+            <li>Godot</li>
+            <li>Blender</li>
             <li>Git</li>
-            <li>React</li>
-            <li>Docker</li>
           </ul>
         </div>
         <div>
           <h3>Other</h3>
           <ul class="tags">
-            <li>English (fluent)</li>
-            <li>French (native)</li>
-            <li>Teamwork</li>
+            <li>Game design</li>
+            <li>English</li>
+            <li>German</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ========== EXPERIENCE ==========
-         To add an entry: copy one <li class="timeline-item"> ... </li> block.
-         Most recent first. -->
-    <section id="experience" class="section container">
-      <h2>Experience</h2>
-      <ol class="timeline">
-
-        <li class="timeline-item">
-          <div class="when">2025 — Present</div>
-          <div>
-            <h3>Job Title · Company</h3>
-            <p>One or two lines on what you did and what you achieved.</p>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <div class="when">2024</div>
-          <div>
-            <h3>Internship · Company</h3>
-            <p>One or two lines on what you did and what you achieved.</p>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <div class="when">2021 — 2025</div>
-          <div>
-            <h3>Degree · University</h3>
-            <p>Field of study, relevant courses or thesis topic.</p>
-          </div>
-        </li>
-
-      </ol>
+    <!-- ========== ABOUT ME ==========
+         Write a few paragraphs about yourself here. -->
+    <section id="about" class="section container">
+      <h2>About me</h2>
+      <div class="about">
+        <p>
+          <!-- Your text here: who you are, what you're studying or working on. -->
+        </p>
+        <p>
+          <!-- Your text here: what you enjoy building, what you're looking for next. -->
+        </p>
+      </div>
     </section>
 
   </main>
@@ -164,6 +174,7 @@
       <p class="lead">Interested in working together or just want to say hi? Reach out.</p>
       <ul class="contact-list">
         <li><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><a href="https://cedip.itch.io" target="_blank" rel="noopener">itch.io</a></li>
         <li><a href="https://github.com/cediip" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>

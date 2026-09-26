@@ -105,15 +105,42 @@ p { margin: 0 0 1rem; }
 .card {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: transform 0.15s ease, border-color 0.15s ease;
 }
 .card:hover { transform: translateY(-3px); border-color: var(--accent); }
-.card p { color: var(--muted); font-size: 0.95rem; }
-.card .links { margin-top: auto; display: flex; gap: 1rem; font-weight: 500; font-size: 0.95rem; }
+
+/* Poster image at the top of a card */
+.poster {
+  display: block;
+  aspect-ratio: 630 / 500;
+  /* Shown while the image loads, or if the file is missing */
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--border);
+}
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+.card-body .desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  /* Keeps the card shaped while the description is still empty */
+  min-height: 3.5rem;
+}
+.card-link { align-self: flex-start; margin-top: auto; }
 
 /* ---------- Tags (used in projects & skills) ---------- */
 .tags {
@@ -140,18 +167,14 @@ p { margin: 0 0 1rem; }
   gap: 2rem;
 }
 
-/* ---------- Experience ---------- */
-.timeline { list-style: none; padding: 0; margin: 0; }
-.timeline-item {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 1.5rem;
-  padding: 1.25rem 0;
-  border-top: 1px solid var(--border);
+/* ---------- About me ---------- */
+.about {
+  max-width: 65ch;
+  font-size: 1.05rem;
+  color: var(--muted);
 }
-.timeline-item:last-child { border-bottom: 1px solid var(--border); }
-.timeline-item .when { color: var(--muted); font-size: 0.9rem; padding-top: 0.1rem; }
-.timeline-item p { color: var(--muted); margin: 0; }
+/* Keeps the section from collapsing while the paragraphs are still empty */
+.about p { min-height: 1.6em; }
 
 /* ---------- Footer / Contact ---------- */
 .footer {
@@ -184,5 +207,4 @@ p { margin: 0 0 1rem; }
   .nav nav { gap: 0.9rem; }
   .nav nav a { font-size: 0.85rem; }
   .hero { padding-top: 3.5rem; }
-  .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
 }
