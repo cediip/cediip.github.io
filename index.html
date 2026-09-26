@@ -29,10 +29,13 @@
   <main id="top">
 
     <!-- ========== PROJECTS ==========
-         Each project is one <article class="card"> block.
+         Each project is one <article class="card"> block. Closed, a card shows
+         only the poster, the title and the tags, so every card is the same
+         size. The description and the link live inside <details class="more">
+         and appear when "More information" is clicked.
          - poster:      put the image file in the images/ folder and point src at it
+         - tags:        one <li> per tag, add as many as you like
          - description: write your text in the <p class="desc"> element
-         - link:        the "Go to page" button at the bottom of the card
          To add a project, copy a whole <article> block and paste it in the grid. -->
     <section id="projects" class="section container">
       <h2>Projects</h2>
@@ -44,14 +47,17 @@
           </a>
           <div class="card-body">
             <h3>Bonk</h3>
-            <p class="desc">
-              This was my first game project at uni in a group of 2. We created a 2D action plaformer with a core mechanic of using the players baseball bat to hit the slain enemies heads and other projectiles to defeat them. 
-              Combined with great movement mechanics,fun level design and a highscore mechanic this makes for a simple jet very fun game.
-            </p>
             <ul class="tags">
               <li>Game</li>
             </ul>
-            <a class="btn btn-primary card-link" href="https://foolishraccoon.itch.io/bonk" target="_blank" rel="noopener">Go to page</a>
+            <details class="more">
+              <summary>More information</summary>
+              <p class="desc">
+                This was my first game project at uni in a group of 2. We created a 2D action plaformer with a core mechanic of using the players baseball bat to hit the slain enemies heads and other projectiles to defeat them.
+                Combined with great movement mechanics,fun level design and a highscore mechanic this makes for a simple jet very fun game.
+              </p>
+              <a class="btn btn-primary card-link" href="https://foolishraccoon.itch.io/bonk" target="_blank" rel="noopener">Go to page</a>
+            </details>
           </div>
         </article>
 
@@ -61,15 +67,18 @@
           </a>
           <div class="card-body">
             <h3>CCTB Spatial Agents</h3>
-            <p class="desc">
-              This was my second uni project with the same group of two. Here we had to design an app for our stakeholder, mimicking a real world scenario.
-              This app should allow the user to create their own simulation by importing their own environment and then add any number of agents with differents behaviours.
-              This should thereforee allow the user to study different scenarios based on environment agent number and behviour. This project also taught me how to optimise UI/UX due to the inherent need for user customisation.
-            </p>
             <ul class="tags">
               <li>Simulation</li>
             </ul>
-            <a class="btn btn-primary card-link" href="https://foolishraccoon.itch.io/cctb-spatial-agents" target="_blank" rel="noopener">Go to page</a>
+            <details class="more">
+              <summary>More information</summary>
+              <p class="desc">
+                This was my second uni project with the same group of two. Here we had to design an app for our stakeholder, mimicking a real world scenario.
+                This app should allow the user to create their own simulation by importing their own environment and then add any number of agents with differents behaviours.
+                This should thereforee allow the user to study different scenarios based on environment agent number and behviour. This project also taught me how to optimise UI/UX due to the inherent need for user customisation.
+              </p>
+              <a class="btn btn-primary card-link" href="https://foolishraccoon.itch.io/cctb-spatial-agents" target="_blank" rel="noopener">Go to page</a>
+            </details>
           </div>
         </article>
 
@@ -79,13 +88,16 @@
           </a>
           <div class="card-body">
             <h3>Child Delivery Service</h3>
-            <p class="desc">
-              This fun little game was created during a game jam. Me and my friends had to create this game in 3 days which allowed us to learn how to work with little time and make the best out of it.
-            </p>
             <ul class="tags">
               <li>Game</li>
             </ul>
-            <a class="btn btn-primary card-link" href="https://mrb0h.itch.io/child-delivery-service" target="_blank" rel="noopener">Go to page</a>
+            <details class="more">
+              <summary>More information</summary>
+              <p class="desc">
+                This fun little game was created during a game jam. Me and my friends had to create this game in 3 days which allowed us to learn how to work with little time and make the best out of it.
+              </p>
+              <a class="btn btn-primary card-link" href="https://mrb0h.itch.io/child-delivery-service" target="_blank" rel="noopener">Go to page</a>
+            </details>
           </div>
         </article>
 
@@ -95,14 +107,17 @@
           </a>
           <div class="card-body">
             <h3>Recoil Arena</h3>
-            <p class="desc">
-              This is my current uni project where I have to create a game from scratch, meaning without the use of a preexisting game engine.
-              Although the use of some libraries is allowed this teaches me the core of how to build my own engine and all that comes with it.
-            </p>
             <ul class="tags">
               <li>Game</li>
             </ul>
-            <a class="btn btn-primary card-link" href="https://cedip.itch.io/recoil-arena" target="_blank" rel="noopener">Go to page</a>
+            <details class="more">
+              <summary>More information</summary>
+              <p class="desc">
+                This is my current uni project where I have to create a game from scratch, meaning without the use of a preexisting game engine.
+                Although the use of some libraries is allowed this teaches me the core of how to build my own engine and all that comes with it.
+              </p>
+              <a class="btn btn-primary card-link" href="https://cedip.itch.io/recoil-arena" target="_blank" rel="noopener">Go to page</a>
+            </details>
           </div>
         </article>
 
@@ -164,15 +179,16 @@
   <footer id="contact" class="footer">
     <div class="container">
       <h2>Contact</h2>
+      <!-- One <li> per address: a label, then the mail link. -->
       <ul class="contact-list">
-        <p>
-          personal mail:
-        </p>
-        <li><a href="mailto:cedricperey2002@gmail.com">cedricperey2002@gmail.com</a></li>
-        <p>
-          uni mail:
-        </p>
-        <li><a href="mailto:cedric.perez@stud-mail.uni-wuerzburg.de">cedric.perez@stud-mail.uni-wuerzburg.de</a></li>
+        <li>
+          <span class="contact-label">Personal</span>
+          <a href="mailto:cedricperey2002@gmail.com">cedricperey2002@gmail.com</a>
+        </li>
+        <li>
+          <span class="contact-label">University</span>
+          <a href="mailto:cedric.perez@stud-mail.uni-wuerzburg.de">cedric.perez@stud-mail.uni-wuerzburg.de</a>
+        </li>
       </ul>
       <p class="copyright">© <span id="year"></span> Cedric Perez</p>
     </div>
