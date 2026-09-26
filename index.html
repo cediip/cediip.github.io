@@ -7,7 +7,8 @@
   <meta name="description" content="Portfolio of Cedric Perez: games, projects and skills.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,6 +29,21 @@
 
   <main id="top">
 
+    <!-- ========== INTRO ==========
+         The first thing a visitor sees: who you are, in one line. -->
+    <section class="hero container">
+      <p class="eyebrow">Games Engineering · University of Würzburg</p>
+      <h1>Cedric Perez</h1>
+      <p class="lead">
+        I build games and interactive experiences, and I am always eager to
+        learn the skills that make them more immersive.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See my projects</a>
+        <a href="#contact" class="btn">Get in touch</a>
+      </div>
+    </section>
+
     <!-- ========== PROJECTS ==========
          Each project is one <article class="card"> block. Closed, a card shows
          only the poster, the title and the tags, so every card is the same
@@ -42,7 +58,7 @@
       <div class="grid">
 
         <article class="card">
-          <a class="poster" href="https://foolishraccoon.itch.io/bonk" target="_blank" rel="noopener">
+          <a class="poster" style="--poster: url(images/bonk.png)" href="https://foolishraccoon.itch.io/bonk" target="_blank" rel="noopener">
             <img src="images/bonk.png" alt="Poster for Bonk" loading="lazy">
           </a>
           <div class="card-body">
@@ -66,7 +82,7 @@
         </article>
 
         <article class="card">
-          <a class="poster" href="https://foolishraccoon.itch.io/cctb-spatial-agents" target="_blank" rel="noopener">
+          <a class="poster" style="--poster: url(images/cctb-spatial-agents.png)" href="https://foolishraccoon.itch.io/cctb-spatial-agents" target="_blank" rel="noopener">
             <img src="images/cctb-spatial-agents.png" alt="Poster for CCTB Spatial Agents" loading="lazy">
           </a>
           <div class="card-body">
@@ -94,11 +110,11 @@
         </article>
 
         <article class="card">
-          <a class="poster" href="https://mrb0h.itch.io/child-delivery-service" target="_blank" rel="noopener">
+          <a class="poster" style="--poster: url(images/child-delivery-service.png)" href="https://mrb0h.itch.io/child-delivery-service" target="_blank" rel="noopener">
             <img src="images/child-delivery-service.png" alt="Poster for Child Delivery Service" loading="lazy">
           </a>
           <div class="card-body">
-            <h3>Child Delivery Service</h3>S
+            <h3>Child Delivery Service</h3>
             <ul class="tags">
               <li>Game</li>
               <li>Game/Level Design</li>
@@ -117,7 +133,7 @@
         </article>
 
         <article class="card">
-          <a class="poster" href="https://cedip.itch.io/recoil-arena" target="_blank" rel="noopener">
+          <a class="poster" style="--poster: url(images/recoil-arena.png)" href="https://cedip.itch.io/recoil-arena" target="_blank" rel="noopener">
             <img src="images/recoil-arena.png" alt="Poster for Recoil Arena" loading="lazy">
           </a>
           <div class="card-body">
@@ -205,6 +221,11 @@
         <li>
           <span class="contact-label">University</span>
           <a href="mailto:cedric.perez@stud-mail.uni-wuerzburg.de">cedric.perez@stud-mail.uni-wuerzburg.de</a>
+        </li>
+        <li>
+          <span class="contact-label">Elsewhere</span>
+          <a href="https://cedip.itch.io" target="_blank" rel="noopener">itch.io</a>
+          <a href="https://github.com/cediip" target="_blank" rel="noopener">GitHub</a>
         </li>
       </ul>
       <p class="copyright">© <span id="year"></span> Cedric Perez</p>

@@ -1,24 +1,27 @@
-/* ---------- Theme ---------- */
+/* ---------- Theme ----------
+   Change --accent (and --accent-soft, its pale background twin) to recolour
+   the whole page: links, buttons, tags and the bar under each heading. */
 :root {
-  --bg: #fafaf9;
+  --bg: #faf9fb;
   --surface: #ffffff;
-  --text: #1c1917;
-  --muted: #57534e;
-  --border: #e7e5e4;
-  --accent: #2563eb;
-  --accent-soft: #eff6ff;
-  --radius: 12px;
+  --text: #1a1626;
+  --muted: #56526a;
+  --border: #e8e5ee;
+  --accent: #7c22ce;
+  --accent-soft: #f6eefe;
+  --gradient: linear-gradient(90deg, #06b6d4, #a855f7);
+  --radius: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0c0a09;
-    --surface: #1c1917;
-    --text: #f5f5f4;
-    --muted: #a8a29e;
-    --border: #292524;
-    --accent: #60a5fa;
-    --accent-soft: #172554;
+    --bg: #0b0a12;
+    --surface: #171426;
+    --text: #f4f2f8;
+    --muted: #a49fb8;
+    --border: #262238;
+    --accent: #c084fc;
+    --accent-soft: #2a1b47;
   }
 }
 
@@ -38,18 +41,35 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5rem; }
-h2 { font-size: 1.75rem; margin-bottom: 1.5rem; }
+h1, h2, h3 {
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+}
+h2 { font-size: 1.75rem; margin-bottom: 1.75rem; }
 h3 { font-size: 1.1rem; }
 p { margin: 0 0 1rem; }
 
+/* Short accent bar under every section heading */
+.section > h2::after,
+.footer h2::after {
+  content: "";
+  display: block;
+  width: 2.75rem;
+  height: 3px;
+  margin-top: 0.6rem;
+  border-radius: 999px;
+  background: var(--gradient);
+}
+
 .container {
-  max-width: 960px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
-.section { padding: 4rem 16px; scroll-margin-top: 76px; }
+.section { padding: 5.5rem 16px; scroll-margin-top: 76px; }
 
 .lead { font-size: 1.125rem; color: var(--muted); max-width: 60ch; }
 
@@ -84,9 +104,26 @@ p { margin: 0 0 1rem; }
 .nav nav a:hover { color: var(--text); text-decoration: none; }
 
 /* ---------- Hero ---------- */
-.hero { padding-top: 6rem; padding-bottom: 4rem; }
-.eyebrow { color: var(--accent); font-weight: 600; margin-bottom: 0.25rem; }
-.hero h1 { font-size: clamp(2.5rem, 7vw, 4rem); letter-spacing: -0.02em; }
+.hero { padding-top: 6rem; padding-bottom: 5rem; }
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  letter-spacing: -0.03em;
+  /* Name picked out in the accent gradient */
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+}
+.hero .lead { font-size: 1.2rem; }
 .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; }
 
 .btn {
@@ -105,11 +142,12 @@ p { margin: 0 0 1rem; }
 /* ---------- Projects ---------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  /* Wide cards, so four projects sit as a tidy 2 x 2 instead of 3 + 1 */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
   /* Every card in a row gets the same height, whatever its content */
   grid-auto-rows: 1fr;
   align-items: stretch;
-  gap: 1.25rem;
+  gap: 1.75rem;
 }
 
 .card {
@@ -119,25 +157,54 @@ p { margin: 0 0 1rem; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: transform 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
-.card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 28px -12px rgb(0 0 0 / 0.25);
+}
 
 /* Poster image at the top of a card.
    Portrait box, because itch covers are usually taller than they are wide.
    "contain" shows the whole poster instead of cropping it, so covers of any
-   shape keep their title readable; the backdrop fills whatever is left over. */
+   shape keep their title readable. Whatever space is left over is filled by a
+   blurred, enlarged copy of the same poster, which each card passes in as
+   --poster in its style attribute, so covers of different shapes still look
+   deliberate. */
 .poster {
+  position: relative;
   display: block;
   aspect-ratio: 3 / 4;
+  overflow: hidden;
   background: color-mix(in srgb, var(--text) 7%, var(--surface));
   border-bottom: 1px solid var(--border);
 }
+.poster::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background-image: var(--poster);
+  background-size: cover;
+  background-position: center;
+  filter: blur(26px) saturate(1.3);
+  opacity: 0.6;
+}
 .poster img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
+  transition: transform 0.35s ease;
+}
+.card:hover .poster img { transform: scale(1.04); }
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .poster img { transition: none; }
+  .card:hover { transform: none; }
+  .card:hover .poster img { transform: none; }
 }
 
 .card-body {
