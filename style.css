@@ -91,9 +91,9 @@ p { margin: 0 0 1rem; }
   padding: 0.85rem 0;
 }
 
-/* Same size and weight as the section headings (h2) further down the page */
+/* Just under the size of the section headings (h2) further down the page */
 .logo {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text);
@@ -334,7 +334,7 @@ p { margin: 0 0 1rem; }
 @media (max-width: 600px) {
   /* The big logo and the menu no longer fit side by side, so stack them */
   .nav-inner { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
-  .logo { font-size: 1.4rem; }
+  .logo { font-size: 1.25rem; }
   .nav nav { gap: 0.9rem; }
   .nav nav a { font-size: 0.85rem; }
   .section, .footer { scroll-margin-top: 96px; }
