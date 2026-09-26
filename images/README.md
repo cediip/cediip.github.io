@@ -1,17 +1,18 @@
 # Project posters
 
-Save each itch.io cover image here, using exactly these file names (they are the
-names `index.html` looks for):
+The cover image for each project. These file names are the ones `index.html`
+points at, so if you replace a file, either keep the name or update the `src`
+in `index.html` to match.
 
 | File                          | Project                                                  |
 | ----------------------------- | -------------------------------------------------------- |
-| `bonk.png`                    | https://foolishraccoon.itch.io/bonk                       |
-| `cctb-spatial-agents.png`     | https://foolishraccoon.itch.io/cctb-spatial-agents        |
+| `Bonk!.png`                   | https://foolishraccoon.itch.io/bonk                       |
+| `CCTB-spatial-agents.png`     | https://foolishraccoon.itch.io/cctb-spatial-agents        |
 | `child-delivery-service.png`  | https://mrb0h.itch.io/child-delivery-service              |
-| `recoil-arena.png`            | https://cedip.itch.io/recoil-arena                        |
+| `Recoil-Arena.png`            | https://cedip.itch.io/recoil-arena                        |
 
 To get a cover: open the project page on itch.io, right-click the big image at
 the top and choose "Save image as…".
 
-If a file you save is a `.jpg` instead of a `.png`, either rename it or change
-the `src` in `index.html` to match.
+Keep only images in this folder — anything else here gets published with the
+site.
