@@ -6,10 +6,13 @@ in `index.html` to match.
 
 | File                          | Project                                                  |
 | ----------------------------- | -------------------------------------------------------- |
-| `Bonk!.png`                   | https://foolishraccoon.itch.io/bonk                       |
-| `CCTB-spatial-agents.png`     | https://foolishraccoon.itch.io/cctb-spatial-agents        |
+| `bonk.png`                    | https://foolishraccoon.itch.io/bonk                       |
+| `cctb-spatial-agents.png`     | https://foolishraccoon.itch.io/cctb-spatial-agents        |
 | `child-delivery-service.png`  | https://mrb0h.itch.io/child-delivery-service              |
-| `Recoil-Arena.png`            | https://cedip.itch.io/recoil-arena                        |
+| `recoil-arena.png`            | https://cedip.itch.io/recoil-arena                        |
+
+Capitals matter: GitHub's servers treat `Bonk.png` and `bonk.png` as two
+different files, even though Windows does not.
 
 To get a cover: open the project page on itch.io, right-click the big image at
 the top and choose "Save image as…".
